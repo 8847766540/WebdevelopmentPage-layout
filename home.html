@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <title>Online sports equipment shopping</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">e-Sportz</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <div class="container my-1">
+            <div class="row">
+              <div class="col-sm-6">
+                <button class="btn btn-outline-danger mx-1" type="button" data-bs-toggle="modal"
+                  data-bs-target="#loginModal">Log In</button>
+                <button class="btn btn-outline-danger mx-1" type="button" data-bs-toggle="modal"
+                  data-bs-target="#signupModal">Sign Up</button>
+              </div>
+              <div class="col-sm-6">
+                <div class="row my-2 my-sm-0">
+                  <div class="col-8">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </div>
+                <div class="col-4">
+                  <button class="btn btn-outline-danger" type="submit">Search</button>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Log In to your account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Save Password</label>
+            </div>
+            <button type="submit" class="btn btn-info">Log In</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create a new account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Username</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-info">Sign Up</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide my-2" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="img/slider.jfif" class="d-block w-100" alt="cricket image">
+        <div class="container">
+          <div class="carousel-caption text-align-center d-none d-md-block">
+            <h1 class="text-light">Welcome to e-Sportz</h1>
+            <h4 class="text-light">One place where you can order all sports stuf.</h4>
+            <button class="btn btn-danger">Log In</button>
+            <button class="btn btn-success">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+
+
+    <div class="container my-4 border">
+      <div class="row">
+        <div class="container d-flex justify-content-between my-2">
+          <h2>Cricket</h2>
+          <button class="btn btn-primary">View All</button>
+        </div>
+      </div>
+      <div class="container mb-2">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/cricket5.jpg" class="card-img-top" alt="bat" style="width:5rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Bat</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/cricket4.png" class="card-img-top" alt="helmet" style="width:5rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Helmet</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/cricket3.webp" class="card-img-top" alt="stumps" style="width:5rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Stumps</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/cricket1.jpg" class="card-img-top" alt="leather ball box" style="width:5rem;">
+                      <div class="card-body container">
+                        <h5 class="card-title">Leather balls</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/cricket2.jfif" class="card-img-top" alt="tennis ball box" style="width:5rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Tennis balls</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/chestgaurd.jpg" class="card-img-top" alt="Chest Pad" style="width:5rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Chest Pad</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/cricketglobs.jpg" class="card-img-top" alt="Cricket Globs" style="width:5rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Globs</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/cricketpads.png" class="card-img-top" alt="Cricket Pads" style="width:5rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Leg Pads</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded px-1 btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container my-4 border">
+      <div class="row">
+        <div class="container d-flex justify-content-between my-2">
+          <h2>Hockey</h2>
+          <button class="btn btn-primary">View All</button>
+        </div>
+      </div>
+      <div class="container mb-2">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/hockeystick.jpeg" class="card-img-top" alt="hockey stick" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Hockey stick</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/hockeyball.jpg" class="card-img-top" alt="ball" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Ball</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/hockeyhelmet.jpg" class="card-img-top" alt="helmet" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Helmet</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/bodyarmourgaurd.jpg" class="card-img-top" alt="Body Armour Gaurd"
+                        style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Body Armour Gaurd</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/leggauard.png" class="card-img-top" alt="Leg Gaurd" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Leg Gaurd</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/mouthgaurd.jfif" class="card-img-top" alt="Mouth Gaurd" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Mouth Gaurd</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/throatprotector.png" class="card-img-top" alt="Throat Proctector"
+                        style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Throat Proctector</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/stickbag.jfif" class="card-img-top" alt="bag" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Bag</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container my-4 border">
+      <div class="row">
+        <div class="container d-flex justify-content-between my-2">
+          <h2>Football</h2>
+          <button class="btn btn-primary">View All</button>
+        </div>
+      </div>
+      <div class="container mb-2">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/footballball.jfif" class="card-img-top" alt="ball" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Ball</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/footballhelmet.jpg" class="card-img-top" alt="helmet" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Helmet</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/footballglubs.jpg" class="card-img-top" alt="globs" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Globs</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/cricket1.jpg" class="card-img-top" alt="bat" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Bat</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/cricket2.jfif" class="card-img-top" alt="bat" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Bat</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/cricket5.jpg" class="card-img-top" alt="bat" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Bat</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/cricket5.jpg" class="card-img-top" alt="bat" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Bat</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/cricket5.jpg" class="card-img-top" alt="bat" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Bat</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container my-4 border">
+      <div class="row">
+        <div class="container d-flex justify-content-between my-2">
+          <h2>Shoes</h2>
+          <button class="btn btn-primary">View All</button>
+        </div>
+      </div>
+      <div class="container mb-2">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/adidasshoes.jpg" class="card-img-top" alt="Adidas Shoes" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Adidas Shoes</h5>
+                        <p>&#8377; 1200</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/lancershoes.jfif" class="card-img-top" alt="Lancer Shoes" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Lancer Shoes</h5>
+                        <p>&#8377; 800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/libertyshoes.jpg" class="card-img-top" alt="Liberty Shoes" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Liberty Shoes</h5>
+                        <p>&#8377; 900</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/sparxshoes.jpg" class="card-img-top" alt="Sparx Shoes" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Sparx Shoes</h5>
+                        <p>&#8377; 1800</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/nikeshoes.jpg" class="card-img-top" alt="Nike Shoes" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Nike White Shoes</h5>
+                        <p>&#8377; 900</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/batashoes.jfif" class="card-img-top" alt="Bata Shoes" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Bata Brown Shoes</h5>
+                        <p>&#8377; 2000</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/paragonshoes.jpg" class="card-img-top" alt="Paragon Shoes" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Paragon Shoes</h5>
+                        <p>&#8377; 1000</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/rebookshoes.jfif" class="card-img-top" alt="Reebook Shoes" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Reebook Shoes</h5>
+                        <p>&#8377; 1500</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container my-4 border">
+      <div class="row">
+        <div class="container d-flex justify-content-between my-2">
+          <h2>Jersey</h2>
+          <button class="btn btn-primary">View All</button>
+        </div>
+      </div>
+      <div class="container mb-2">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/mi.jpeg" class="card-img-top" alt="MI Jersey" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">MI Jersey</h5>
+                        <p>&#8377; 250</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/csk.jpeg" class="card-img-top" alt="CSK Jersey" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">CSK Jersey</h5>
+                        <p>&#8377; 250</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/dc.jpeg" class="card-img-top" alt="DC Jersey" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">DC Jersey</h5>
+                        <p>&#8377; 250</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/pbks.jfif" class="card-img-top" alt="PBKS Jersey" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">PBKS Jersey</h5>
+                        <p>&#8377; 250</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/rcb.jpeg" class="card-img-top" alt="RCB Jersey" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">RCB Jersey</h5>
+                        <p>&#8377; 250</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/kkr.jpeg" class="card-img-top" alt="KKR Jersey" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">KKR Jersey</h5>
+                        <p>&#8377; 250</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/srh.jpeg" class="card-img-top" alt="SRH Jersey" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">SRH Jersey</h5>
+                        <p>&#8377; 250</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card d-flex justify-content-center align-items-center">
+                      <img src="img/rr.png" class="card-img-top" alt="RR Jersey" style="width:8rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">RR Jersey</h5>
+                        <p>&#8377; 250</p>
+                        <a href="#" class="rounded btn-danger" style="text-decoration : none;">Buy Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="page-footer font-small bg-dark">
+    <div class="footer-copyright text-center py-3 text-white">© 2020 Copyright:
+      <a href="#">e-Sportz.com</a>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

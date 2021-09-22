@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Online sports equipment shopping</title>
+</head>
+
+<body>
+ 
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">e-Sportz</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Inquire through whatsapp
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="https://api.whatsapp.com/send?phone=+918208142141&amp;text=Hello! I would like to enquiry about a product on e-Sportz.com">Contact to Prathmesh</a>
+              <a class="dropdown-item" href="https://api.whatsapp.com/send?phone=+919607167293&amp;text=Hello! I would like to enquiry about a product on e-Sportz.com">Contact to Pruthviraj</a>
+              <a class="dropdown-item" href="https://api.whatsapp.com/send?phone=+918847766540&amp;text=Hello! I would like to enquiry about a product on e-Sportz.com">Contact to Vishal</a>
+              <a class="dropdown-item" href="https://api.whatsapp.com/send?phone=+918847766540&amp;text=Hello! I would like to enquiry about a product on e-Sportz.com">Contact to Chaitanya</a>
+            </div>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link active" href="about.html">Help</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <div class="container my-1">
+            <div class="row">
+              <div class="col-lg-6 d-flex justify-content-start justify-content-lg-end">
+                <button class="btn btn-outline-danger mx-1" type="button" data-bs-toggle="modal"
+                  data-bs-target="#loginModal">Log In</button>
+                <button class="btn btn-outline-danger mx-1" type="button" data-bs-toggle="modal"
+                  data-bs-target="#signupModal">Sign Up</button>
+              </div>
+              <div class="col-lg-6 d-flex justify-content-start justify-content-lg-end">
+                <div class="row my-2 my-lg-0">
+                  <div class="col-8">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  </div>
+                  <div class="col-4">
+                    <button class="btn btn-outline-danger" type="submit">Search</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Log In to your account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Save Password</label>
+            </div>
+            <button type="submit" class="btn btn-info">Log In</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create a new account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Username</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+              <label for="exampleInputPassword1" class="form-label text-danger">Remenber password should contain at
+                least one character one digit and one special symbol.</label>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-info">Sign Up</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+
+  <nav style="border: 1px solid black">
+
+    <div class="col-auto" style="background: url('helpcenter.jpg') no-repeat 0 0;
+  background-size: cover; border-image-width: 0vw; padding: 5px;">
+      <h2 style="text-align: center; ">Help Center</h2>
+      <div class="class">All the answer are right here. You just need to ask</div>
+      <br>
+      <!-- <h4>All the answer are right here. You just need to ask</h4> -->
+      <label class="sr-only" for="inlineFormInputGroup">Search</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">@</div>
+        </div>
+        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search">
+      </div>
+    </div>
+  </nav>
+
+  <br>
+
+  <div class="row row-cols-1 row-cols-md-2" style="margin-left: 2px;
+      margin-right: 2px;">
+    <div class="col mb-4">
+      <div class="card">
+        <img src="https://cdn1.iconfinder.com/data/icons/online-stores-payment-and-support-1/512/icons-05-512.png"
+          class="card-img-top" alt="" style="width: 122px;">
+        <div class="card-body">
+          <h5 class="card-title">Community Forum</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card">
+        <img src="https://image.shutterstock.com/image-vector/customer-icon-vector-filled-flat-260nw-664146595.jpg"
+          class="card-img-top" alt="Customers & Vendors" style="width: 122px;">
+        <div class="card-body">
+          <h5 class="card-title">Customers & Vendors</h5>
+          <p class="card-text">Create edit and manage all your customers and Vendors</p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="col mb-4">
+      <div class="card">
+        <img
+          src="https://w7.pngwing.com/pngs/48/9/png-transparent-information-technology-computer-software-software-project-management-troubleshooting-technology-arc-angle-electronics-logo.png"
+          class="card-img-top" alt="Troubleshooting" style="width: 122px;">
+        <div class="card-body">
+          <h5 class="card-title">Troubleshooting</h5>
+          <p class="card-text">
+            Step-by-step guides to pin point your problems.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card">
+        <img src="Multi warehouse.jfif" class="card-img-top" alt="Multi Warehouse" style="width: 122px;">
+        <div class="card-body">
+          <h5 class="card-title">Multi Warehouse</h5>
+          <p class="card-text">To manage goods across multiple locations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="card text-center">
+      <div class="card-header">
+        Featured
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">e-Sportz.com</h5>
+        <p>Stumped? We're here to help.<a href="#">Contact Us</a></p>
+        <!-- <a href="index.html" class="btn btn-primary my-1">Go to homepage</a> -->
+        <div class="footer-copyright text-center bg-dark text-white py-2">© 2021 Copyright All rights reserved:
+          <a href="#">e-Sportz.com</a>
+        </div>
+      </div>
+
+
+    </div>
+  </footer>
+
+</body>
+
+</html>
